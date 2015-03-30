@@ -11,7 +11,7 @@ Simple Magento extension to send all transactional e-mails through custom SMTP s
 
 #### Screenshot:
 
-![Screenshot](http://www.creativecast.de/ak/2015-03-30_152629.png)
+![Screenshot](http://www.creativecast.de/ak/2015-03-30_152907.png)
 
 #### Notes:
 
