@@ -1,4 +1,4 @@
-###  Magento SMTP Realy
+###  Magento SMTP Relay
 
 Simple Magento extension to send all transactional e-mails through custom SMTP server.
 
