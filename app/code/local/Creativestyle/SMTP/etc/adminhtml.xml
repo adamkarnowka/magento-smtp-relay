@@ -1,0 +1,16 @@
+<config>
+    <menu>
+        <system translate="title" module="creativestyle_smtp">
+            <children>
+                <smtp_settings translate="title" module="creativestyle_smtp">
+                    <title>SMTP Settings</title>
+                    <sort_order>100</sort_order>
+                    <action>adminhtml/system_config/edit/section/creativestyle_smtp</action>
+                    <depends>
+                        <config>creativestyle_smtp/settings/enabled</config>
+                    </depends>
+                </smtp_settings>
+            </children>
+        </system>
+    </menu>
+</config>
