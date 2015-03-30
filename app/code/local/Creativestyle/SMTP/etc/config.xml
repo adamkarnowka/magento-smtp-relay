@@ -65,23 +65,6 @@
             </resources>
         </acl>
     </adminhtml>
-    <menu>
-        <system translate="title" module="creativestyle_smtp">
-                <children>
-                    <smtp_settings translate="title" module="creativestyle_smtp">
-                        <title>SMTP Settings</title>
-                        <sort_order>5</sort_order>
-                        <action>adminhtml/system_config/edit/section/optimisewebcookienotice</action>
-                        <!--<depends>
-                            <config>optimisewebcookienotice/menu/cookienotice_enabled</config>
-                        </depends>-->
-                    </smtp_settings>
-                </children>
-        <!--        <depends>
-                    <config>optimisewebcookienotice/menu/optimiseweball_enabled</config>
-                </depends> -->
-        </system>
-    </menu>
     <default>
         <creativestyle_smtp>
             <settings>
