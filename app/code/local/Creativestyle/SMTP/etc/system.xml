@@ -1,0 +1,145 @@
+<config>
+    <tabs>
+        <creativestyle translate="label" module="creativestyle_smtp">
+            <label>Creativestyle</label>
+            <sort_order>100</sort_order>
+        </creativestyle>
+    </tabs>
+    <sections>
+        <creativestyle_smtp>
+            <label>SMTP Relay</label>
+            <tab>creativestyle</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>150</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>SMTP Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled>
+                            <label>Extension enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip>If disabled, default sending routines are used.</tooltip>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <smtp_host>
+                            <label>SMTP Host</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </smtp_host>
+                        <smtp_user>
+                            <label>SMTP User</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </smtp_user>
+                        <smtp_password>
+                            <label>SMTP Pass</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <frontend_model>creativestyle_smtp/adminhtml_system_config_field_password</frontend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </smtp_password>
+                        <smtp_port>
+                            <label>SMTP Port</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </smtp_port>
+                        <smtp_ssl>
+                            <label>SMTP SSL</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>30</sort_order>
+                            <frontend_type>select</frontend_type>
+                            <source_model>creativestyle_smtp/system_config_source_smtp_ssl</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </smtp_ssl>
+                        <smtp_auth>
+                            <label>SMTP Auth method</label>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>50</sort_order>
+                            <frontend_type>select</frontend_type>
+                            <source_model>creativestyle_smtp/system_config_source_smtp_auth</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </smtp_auth>
+
+                        <info translate="label">
+                            <label></label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>creativestyle_smtp/adminhtml_system_config_field_infoblock</frontend_model>
+                            <sort_order>-1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <generate_txt_version>
+                            <label>Generate txt version</label>
+                            <frontend_type>select</frontend_type>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <tooltip><![CDATA[Smart conversion tool to convert html to txt will be used. Source: https://github.com/soundasleep/html2text]]></tooltip>
+                            <comment>This feature is recommended.</comment>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </generate_txt_version>
+
+                        <headers translate="comment">
+                            <label>Custom headers</label>
+                            <frontend_model>creativestyle_smtp/adminhtml_system_config_field_headers</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>225</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </headers>
+                    </fields>
+                </settings>
+            </groups>
+        </creativestyle_smtp>
+    </sections>
+</config>
