@@ -1,7 +1,6 @@
 <?php
 class Creativestyle_SMTP_Model_System_Config_Source_Smtp_Auth
 {
-
     public function toOptionArray()
     {
         return array(
