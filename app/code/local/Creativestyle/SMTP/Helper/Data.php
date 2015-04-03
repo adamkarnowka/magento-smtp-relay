@@ -12,7 +12,7 @@ class Creativestyle_SMTP_Helper_Data extends Mage_Core_Helper_Abstract {
     public function validateSettings(){
         if(Mage::getStoreConfig('creativestyle_smtp/settings/enabled')){
             $validator = new Zend_Validate_Hostname();
-            if($validator->isValid(Mage::getStoreConfig('creativestyle_smtp/settings/enabled'))){
+            if($validator->isValid(Mage::getStoreConfig('creativestyle_smtp/settings/smtp_host'))){
                 return true;
             } else {
                 Mage::log($validator->getMessages(),Zend_Log::ERR,'creativestyle_smtp.log');
